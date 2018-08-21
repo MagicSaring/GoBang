@@ -33,6 +33,15 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GoBang.cpp">
@@ -42,6 +51,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -54,10 +69,35 @@
     <None Include="res\GoBang.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\GoBang.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\Black.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pk.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Table.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\White.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\lost.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\put.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\win.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -20,6 +20,11 @@ class CGoBangApp : public CWinApp
 public:
 	CGoBangApp();
 
+	TCHAR m_szIni[MAX_PATH];
+	int m_nWin;
+	int m_nDraw;
+	int m_nLost;
+
 // Overrides
 public:
 	virtual BOOL InitInstance();

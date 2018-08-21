@@ -185,13 +185,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GoBang.h" />
     <ClInclude Include="GoBangDlg.h" />
+    <ClInclude Include="Message.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Table.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GoBang.cpp" />
     <ClCompile Include="GoBangDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -200,17 +204,34 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Table.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GoBang.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="res\GoBang.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\Black.bmp" />
     <Image Include="res\GoBang.ico" />
+    <Image Include="res\pk.ico" />
+    <Image Include="res\Table.bmp" />
+    <Image Include="res\White.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\lost.wav" />
+    <Media Include="res\put.wav" />
+    <Media Include="res\win.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="GoBang.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

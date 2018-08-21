@@ -3,13 +3,15 @@
 //
 
 #pragma once
-
+#include "Table.h"
 
 // CGoBangDlg dialog
 class CGoBangDlg : public CDialogEx
 {
 // Construction
 public:
+	CDialog *m_pDlg;
+	CTable m_Table;
 	CGoBangDlg(CWnd* pParent = NULL);	// standard constructor
 
 // Dialog Data
@@ -31,4 +33,10 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+
+public:
+	afx_msg void OnMenuAbout();
+	afx_msg void OnClickedBtnBack();
+	afx_msg void OnMenuPcfirst();
+	afx_msg void OnMenuPlayerfirst();
 };

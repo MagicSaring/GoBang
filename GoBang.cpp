@@ -70,6 +70,35 @@ BOOL CGoBangApp::InitInstance()
 	// such as the name of your company or organization
 	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
 
+
+	//获取配置文件位置
+	::GetModuleFileName(NULL, m_szIni, MAX_PATH);
+	lstrcpy(&m_szIni[lstrlen(m_szIni) - 3], _T("ini"));
+
+	//读取战绩统计
+	m_nWin = ::GetPrivateProfileInt(_T("Stats"), _T("Win"), 0, m_szIni);
+	m_nDraw = ::GetPrivateProfileInt(_T("Stats"), _T("Draw"), 0, m_szIni);
+	m_nLost = ::GetPrivateProfileInt(_T("Stats"), _T("Lost"), 0, m_szIni);
+
+
+	//读取战绩统计
+
+	//注册棋牌窗口类
+	WNDCLASS wc;
+	wc.cbClsExtra = 0;
+	wc.cbWndExtra = 0;
+	wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	wc.hCursor = LoadCursor(IDC_ARROW);
+	wc.hIcon = NULL;
+	wc.hInstance = AfxGetInstanceHandle();
+	wc.lpfnWndProc = ::DefWindowProc;
+	wc.lpszClassName = _T("ChessTable");
+	wc.lpszMenuName = NULL;
+	wc.style = 0;
+	AfxRegisterClass(&wc);
+
+
+
 	CGoBangDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
